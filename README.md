@@ -1,5 +1,6 @@
-### VagrantとAnsibleを使用して開発用サーバを構築する
+## VagrantとAnsibleを使用して開発用サーバを構築する
 
+### 仮想マシンの準備
 #### 1.virtual boxをインストール
 	
 	下記のURLから適切なvirtual boxをダウンロードし、インストールする
@@ -30,4 +31,30 @@
 
 	vagrant up
 
+#### 7.仮想マシンに接続
+
+	vagrant ssh
+
+### Ansibleの設定
+#### 1.Ansibleのパッケージを検索
+
+	apt-cache serch ansible
+
+	ansible - Configuration management, deployment, and task execution system
+	ansible-doc - Ansible documentation and examples
+	ansible-fireball - Ansible fireball transport support
+	ansible-node-fireball - Ansible fireball transport support for nodes
+	python-reclass - hierarchical inventory backend for configuration management systems
+	reclass - hierarchical inventory backend for configuration management systems
+
+#### 2.Ansibleをインストール
+検索して１番上に出てきたパッケージをインストールします。
+
+	sudo apt-get install ansible
+
+#### 3.インストールできたか確認
+
+	which ansible
+
+	/usr/bin/ansible
 
